@@ -1,0 +1,34 @@
+#form {
+  position: absolute;
+  top: 50px;
+  width: 500px;
+  left: calc(50% - 250px);
+  background-color: rgb(164,214,204);
+  border-radius: 10px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+@media (max-width: 600px) {
+  #form {
+    width: 95%;
+    left: 2.5%;
+
+  }
+}
+
+
+
+label {
+  font-weight: bold;
+}
+
+#button-container {
+  width: 100%;
+}
+
+#footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
