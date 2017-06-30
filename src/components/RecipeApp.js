@@ -97,10 +97,12 @@ class RecipeApp extends Component {
     })
   }
   deleteRecipe () {
-    var selectedRecipeIndex = _.findIndex(this.state.recipes, {title: this.state.selectedRecipe.title})
-    this.state.recipes.splice(selectedRecipeIndex, 1)
+    var selectedRecipe = this.state.selectedRecipe
+    var recipes = this.state.recipes.slice()
+    var recipeIndex = _.findIndex(recipes, {title: selectedRecipe.title})
+    recipes.splice(recipeIndex, 1)
     this.setState({
-      recipes: this.state.recipes,
+      recipes: recipes,
       selectedRecipe: null
     })
   }
